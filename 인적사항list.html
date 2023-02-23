@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <button id="btn">다음</button>
+  <script>
+    let root = document.getElementById("root");
+    console.dir(root);
+    let count = 0;
+
+    let humanList = {
+      name : [],
+      age : [],
+      gender : [],
+    }
+
+    // let answer = window.prompt("당신의 이름을 입력해주세요.");
+    // console.log(answer);
+    // console.log("->" + humanList.name[count]);
+
+    let btn = document.getElementById("btn");
+    btn.onclick = function() {
+      let answer = window.prompt("당신의 이름을 입력해주세요.");
+      humanList.name[count] = answer;
+      console.log("->" + humanList.name[count]);
+      count = count + 1;
+      console.log(humanList.name);
+    }
+
+    // humanList.name[0] = "노수민";
+    // console.log(humanList.name);
+    // root.innerHTML = humanList.name[0]; 
+  </script>
+</body>
+</html>
