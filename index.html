@@ -20,9 +20,20 @@
   <script>
     let menu = window.document.getElementById('menu');
     console.dir(menu);
-    console.log(menu.children);
+    console.log(menu.children); //리턴이 배열이다
     console.log(menu.children[0]);
     // 검증 완료
+    console.dir(menu.children[0].style);
+
+    for(let index = 0; index < menu.children.length; index++) {
+      // if(menu.children[index].textContent === "item-3") { //참 실행 구문
+        if(index === 2) {
+      menu.children[index].style.color = "blue";
+      } else {
+        menu.children[index].style.backgroundColor = "blue";
+      }
+    }
+
   </script>
 </body>
 </html>
