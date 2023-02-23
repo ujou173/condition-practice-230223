@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    let root = document.getElementById("root");
+    root.style.width = "870px";
+    let student = [
+      "강지민", "곽윤호", "권예준", "김동주", "김은아",
+      "김종윤", "김지섭", "김형진", "노수민", "류은이",
+      "박달재", "박수연", "박준형", "성해경", "이경택",
+      "이세민", "이재권", "임지성", "장루빈", "정성철",
+      "정지은", "정희은", "최대건", "한유진", "허진",
+    ];
+
+    // 조건문 제어를 위한 카운트 변수
+    let count = 2;
+
+    // 반복문을 student의 데이터 갯수 만큼 반복 시켜라
+    for(let i = 0; i < student.length; i++) {
+      // div 요소를 만듦
+      let div = document.createElement("div");
+      // div를 root의 자식으로 넣는다
+      root.appendChild(div);
+      // div의 textcontent는 student의 i번째 데이터를 담는다
+      div.textContent = student[i];
+      // div의 display 스타일은 inline-block을 가진다
+      div.style.display = "inline-block";
+      // div의 width는 120px을 가진다
+      div.style.width = "120px";
+      // div의 배경색은 lightgray 가진다
+      div.style.backgroundColor = "lightgray";
+      // div의 글자는 중앙 정렬로 한다
+      div.style.textAlign = "center";
+      // div의 marginRight는 10px 가진다
+      div.style.marginRight = "10px"
+      // div의 marginBottom는 10px 가진다
+      div.style.marginBottom = "10px"
+      // 확인용
+      // console.dir(div);
+      console.log(i);
+      console.log(count);
+      // count 값과 i가 같으면 실행해라
+      if(count === i) {
+        // count에 +6을 더해라
+        count = count + 6;
+        // div의 marginRight는 100px을 가진다
+        div.style.marginRight = "100px";
+        console.log(count);
+        console.log(i)
+      }
+    }
+
+    // 2번 8번 14번 20번 26번... 에 margin-left를 주고 싶다 -> 2번 이후엔 +6씩 증가한다
+    // i = 2 -> 
+  </script>
+</body>
+</html>
