@@ -25,8 +25,7 @@
     // 검증 완료
     console.dir(menu.children[0].style);
 
-    for(let index = 0; index < menu.children.length; index++) {
-      // if(menu.children[index].textContent === "item-3") { //참 실행 구문
+    for(let index = 0; index < menu.children.length; index++) { //반복문을 시작한다. 변수 index를 선언과 동시에 0으로 할당하고, index가 menu의 자식들의 갯수보다 작으면 
         if(index === 2) {
       menu.children[index].style.color = "blue";
       } else {

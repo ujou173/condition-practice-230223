@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    // setData라는 객체를 생성한다
+    let setData = {
+      tagNames : ["header", "aside", "main", "footer"],
+      contentValues : ["머리", "사이드", "메인", "발꼬락"],
+      colors : ["red", "green", "blue", "gray"]
+    }
+    // 변수 root은 문서에서 root이라는 아이디를 가진 요소다
+    let root = document.getElementById("root");
+    console.log(setData);
+    console.dir(setData);
+    // 검증 완료
+
+    // 반복문을 setData 객체의 tagNames가 가진 값의 갯수만큼 반복시킨다
+    for(i = 0; i < setData.tagNames.length; i++) {
+      // li라는 변수에 setData의 값 중에 tagNames의 i번째 값을 이름으로 가지는 요소를 만들어서 담았다
+      let li = document.createElement(setData.tagNames[i]);
+      // li의 텍스트컨텐츠에 setData의 값 중에 contentValues의 i번째 값을 담는다.
+      li.textContent = setData.contentValues[i];
+      // id가 root인 요소의 자식으로 li를 넣는다.
+      root.appendChild(li);
+      // li의 스타일중 폰트의 색상은 setData의 colors 값 중에 i번째 값을 담는다.
+      li.style.color = setData.colors[i];
+      console.log(li)
+      console.dir(li)
+    }
+    // root.innerHTML = "<" + setData.tagNames[i] + ">" + setData.contentValues[i] + "</" + setData.tagNames[i] + ">";
+    // setData.contentValues[i].style.color = "setData.colors[i]";
+    
+    
+  </script>
+</body>
+</html>
